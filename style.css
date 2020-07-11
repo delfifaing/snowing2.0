@@ -1,0 +1,68 @@
+/* ---------------- General fonts and texts ---------------- */
+@font-face {
+    font-family: terrain;
+    src: url("terrain.otf") format("opentype");
+}
+
+h1{
+  font-family: terrain;
+  color: white;
+}
+h2{
+  font-family: terrain;
+  color: white;
+}
+h3{
+  font-family: terrain;
+  color: white;
+}
+
+#option-pannel{
+  position: absolute;
+  left:5%;
+  top:5%;
+  width:40%;
+  height: 40%;
+}
+
+#create{
+  position: relative;
+  left: 0%;
+}
+
+.startStop{
+  position: relative;
+  left:0%;
+  top:5%;
+  width:30%;
+  padding: 1%;
+  font-family: terrain;
+  font-size: 30px;
+  background-color: rgba(255,255,255,0.9);
+
+  }
+  .sub-panels{
+    position: relative;
+    left:0%;
+    top:5%;
+    width:70%;
+    }  
+  
+  .onOff{    
+    position: relative;    
+    font-family: terrain;    
+    font-size: 20px;
+    padding-left: 5%;
+    padding-right: 5%;  
+    background-color: rgba(255,255,255,0.9);
+  }    
+  #snowIntensity{
+    background-color: rgba(255,255,255,0.9);
+  }
+  #windIntensity{
+    background-color: rgba(255,255,255,0.9);
+  }
+
+
+
+

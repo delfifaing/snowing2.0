@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Snowing</title>
+  <!-- Required meta tags -->
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+
+  <!-- App's own CSS -->
+  <link rel="stylesheet" href = "style.css" >
+
+   <!-- Bootstrap CSS -->
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+   <!-- Optional JavaScript -->
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    canvas{
+      border: 1px solid black;
+      /* background: gray; */
+      background-image: url("https://c.pxhere.com/photos/b7/67/background_tree_wood_boards_texture_wooden_background_old_brown-1370489.jpg!d")
+    }
+    body {
+     /* Remove margin */
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <canvas id="canvas"></canvas>
+    
+    <div id="option-pannel">
+      <h1 id="create">CREATE YOUR OWN STORM</h1>
+      <button class="startStop" id="startStorm">START</button>
+      <button class="startStop" id="stopStorm">STOP</button>
+      <div class="sub-panel">
+        <h2 >SNOWFALL INTENSITY</h2>
+        <select id="snowIntensity" required>
+          <option selected value disabled> -- Select intensity -- </option>
+          <option value=50>Low</option>
+          <option value=300>Medium</option>
+          <option value=1000>High</option>
+        </select>
+      </div> 
+      
+      <div class="sub-panel">
+        <h2>WIND INTENSITY</h2>
+        <select name="windIntensity" id="windIntensity">
+          <option value=0 >Null</option>
+          <option value=1 >Low</option>
+          <option value=2 >Medium</option>
+          <option value=3 > High</option>
+        </select>
+      </div>
+      <div class="sub-panel">
+        <h2>WIND DIRECTION</h2>
+        <select name="windDirection" id="windDirection"  disabled="disabled">
+          <option value=1 >Easterly</option>
+          <option value=-1>Westerly</option>
+        </select>
+        <div class="sub-panel">
+          <h2>SNOWBALL CREATOR</h2>
+            <button class="onOff" id="on">O N</button>
+            <button class="onOff" id="off">O F F</button>
+
+      </div>
+  </div>
+  
+
+  <script src="snowing.js"></script>
+</body>
+</html>
+
+
+
+
+
