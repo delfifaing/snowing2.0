@@ -8,6 +8,12 @@ canvas.height = window.innerHeight;
 var ctx = canvas.getContext('2d');
 
 // ------------- Variables ------------
+
+// Mouse interactivity
+var mouse = {
+ x: undefined,
+ y: undefined,
+}
 var snowballRadius = 50;
 var maxRadius      = 20;
 var snowball = false;
@@ -88,6 +94,34 @@ windDirection.onchange = function(){
   }
 }
 
+function snowballEffect(event) {
+  // window.addEventListener("mousemove",
+// function hola(event) {
+  mouse.x = event.x;
+  mouse.y = event.y;
+  // })
+}
+
+// Activate snowball effect with on button
+on.addEventListener("click", function() {
+  window.addEventListener("mousemove", snowballEffect)
+  snowball = true;
+  })
+
+off.addEventListener("click", function() {
+  window.removeEventListener("mousemove", snowballEffect)
+  snowball = false;
+  })
+
+
+// Deactivate snowball effect with off button
+// off.addEventListener("mousedown", function() {
+  // window.removeEventListener("mousemove", snowballEffect)
+  // stopAnimation();
+  // createFlakes();
+  // animate();
+  // })
+  
 // Resize Canvas size in when window size is changed
 window.addEventListener("resize", function()
   {
@@ -164,6 +198,25 @@ function Flake(x,y,dx,dy,radius,strongWind) {
         this.y = randomRange(radius, radius+5); // So that snow falls from above
       }
     }
+    // Interactivity to create snowballs
+    if (mouse.x - this.x < snowballRadius && mouse.x - this.x > -snowballRadius &&
+      mouse.y - this.y < snowballRadius && mouse.y - this.y > -snowballRadius){
+    if (this.radius < maxRadius) {
+      this.radius +=1;
+      this.x = mouse.x;
+      this.y = mouse.y;
+      this.dx = 0.5 * windDir;
+      this.dy = 0.5;
+      }
+    }
+    else if (this.radius > this.minRadius) {
+      this.radius -= 1;
+      this.dx = this.originaldx;
+      this.dy = this.originaldy;
+    }
+    if (snowball === false) {
+    this.radius = this.minRadius;
+    }
   }
 }
 
@@ -212,3 +265,6 @@ function animate() {
   }
   stopped = false;
 }
+
+
+// hola
