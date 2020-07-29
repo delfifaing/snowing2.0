@@ -4,7 +4,7 @@ Playing around JavaScript to create some snowfall animation.<br>
 Check it out: https://delfifaing.github.io/snowing2.0/
 
 ## Sample 
-<img src="page_img" height="200px"/>
+<img src="page_img.png" height="200px"/>
 
 ### Run locally
 
