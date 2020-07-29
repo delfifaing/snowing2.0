@@ -126,7 +126,7 @@ $(document).ready(function(){
   })
 })
 
-// ------------- Flakes -------------
+// ------------- Flakes Class -------------
 function Flake(x,y,dx,dy,radius,strongWind) {
   // Attributes
   this.x = x;
